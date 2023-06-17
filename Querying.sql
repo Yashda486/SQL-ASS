@@ -30,3 +30,18 @@ DELETE FROM CUSTOMER;
 DELETE FROM CUSTOMER
 WHERE Address = 'Mum';
 
+/* Views = Sort of a virtual table in SQL */
+CREATE VIEW CUSTOMER_VIEW AS
+SELECT Cust_name, Age
+FROM  CUSTOMER
+WHERE Age >=23;
+
+/* Updating the view table */
+UPDATE CUSTOMER_VIEW 
+SET AGE = 35 
+WHERE Cust_name = 'Yash';
+
+DROP VIEW CUSTOMER_VIEW;
+
+
+
